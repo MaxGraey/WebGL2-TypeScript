@@ -1,5 +1,5 @@
 //
-// Copiright (c) 2017 Max Shaydo aka MaxGraey (https://github.com/MaxGraey)
+// Copyright (c) 2017 Max Shaydo aka MaxGraey (https://github.com/MaxGraey)
 //
 
 
