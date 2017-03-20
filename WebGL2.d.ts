@@ -5,6 +5,17 @@
 declare type GLint64     = number;
 declare type GLuint64EXT = GLint64;
 
+interface ImageBitmap {
+    readonly width: number;
+    readonly height: number;
+    close(): void;
+}
+
+declare var ImageBitmap: {
+    prototype: ImageBitmap;
+    new(): ImageBitmap;
+}
+
 interface WebGLQuery extends WebGLObject {
 }
 
@@ -61,11 +72,11 @@ interface WebGL2RenderingContext extends WebGLRenderingContext {
     texStorage2D(target: number, levels: number, internalformat: number, width: number, height: number): void;
     texStorage3D(target: number, levels: number, internalformat: number, width: number, height: number, depth: number): void;
     texImage3D(target: number, level: number, internalformat: number, width: number, height: number, depth: number, border: number, format: number, type: number, offset: number): void;
-    texImage3D(target: number, level: number, internalformat: number, width: number, height: number, depth: number, border: number, format: number, type: number, source: ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement): void;
+    texImage3D(target: number, level: number, internalformat: number, width: number, height: number, depth: number, border: number, format: number, type: number, source: ImageData | ImageBitmap | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement): void;
     texImage3D(target: number, level: number, internalformat: number, width: number, height: number, depth: number, border: number, format: number, type: number, srcData?: ArrayBufferView): void;
     texImage3D(target: number, level: number, internalformat: number, width: number, height: number, depth: number, border: number, format: number, type: number, srcData: ArrayBufferView, srcOffset: number): void;
     texSubImage3D(target: number, level: number, xoffset: number, yoffset: number, zoffset: number, width: number, height: number, depth: number, format: number, type: number, srcData?: ArrayBufferView, srcOffset?: number): void;
-    texSubImage3D(target: number, level: number, xoffset: number, yoffset: number, zoffset: number, width: number, height: number, depth: number, format: number, type: number, pixels?: ImageData | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement): void;
+    texSubImage3D(target: number, level: number, xoffset: number, yoffset: number, zoffset: number, width: number, height: number, depth: number, format: number, type: number, pixels?: ImageData | ImageBitmap | HTMLImageElement | HTMLCanvasElement | HTMLVideoElement): void;
     texSubImage3D(target: number, level: number, xoffset: number, yoffset: number, zoffset: number, width: number, height: number, depth: number, format: number, type: number, offset: number): void;
     copyTexSubImage3D(target: number, level: number, xoffset: number, yoffset: number, zoffset: number, x: number, y: number, width: number, height: number): void;
     compressedTexImage3D(target: number, level: number, internalformat: number, width: number, height: number, depth: number, border: number, offset: number): void;
@@ -792,5 +803,5 @@ declare var EXT_disjoint_timer_query: {
 
 
 interface HTMLCanvasElement {
-    getContext(contextId: "webgl2", contextAttributes?: WebGLContextAttributes): WebGL2RenderingContext | null;
+    getContext(contextId: "webgl2" | "experimental-webgl2", contextAttributes?: WebGLContextAttributes): WebGL2RenderingContext | null;
 }
