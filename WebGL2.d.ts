@@ -2,7 +2,6 @@
 // Copyright (c) 2017 Max Shaydo aka MaxGraey (https://github.com/MaxGraey)
 //
 
-
 declare type GLint64     = number;
 declare type GLuint64EXT = GLint64;
 
@@ -767,7 +766,7 @@ interface EXT_disjoint_timer_query {
     endQueryEXT(target: number): void;
     queryCounterEXT(query: WebGLTimerQueryEXT | null, target: number): number;
     getQueryEXT(target: number, pname: number): WebGLTimerQueryEXT | number | null;
-    getQueryObjectEXT(query: WebGLTimerQueryEXT | null, pname: number): GLuint64EXT | boolean;
+    getQueryObjectEXT(query: WebGLTimerQueryEXT | null, pname: number): number | boolean;
 
     readonly QUERY_COUNTER_BITS_EXT: number;
     readonly CURRENT_QUERY_EXT: number;

@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "noImplicitAny": true,
+        "strictNullChecks": false,
+        "types": [],
+        "forceConsistentCasingInFileNames": true
+    },
+    "files": [
+        "WebGL2.d.ts"
+    ]
+}
