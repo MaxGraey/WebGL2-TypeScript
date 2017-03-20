@@ -6,14 +6,16 @@ declare type GLint64     = number;
 declare type GLuint64EXT = GLint64;
 
 interface ImageBitmap {
+    close(): void;
     readonly width: number;
     readonly height: number;
-    close(): void;
 }
 
 declare var ImageBitmap: {
     prototype: ImageBitmap;
     new(): ImageBitmap;
+    readonly width: number;
+    readonly height: number;
 }
 
 interface WebGLQuery extends WebGLObject {
