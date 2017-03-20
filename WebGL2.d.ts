@@ -5,6 +5,7 @@
 declare type GLint64     = number;
 declare type GLuint64EXT = GLint64;
 
+/*
 interface SharedArrayBuffer {
     slice(begin?: number, end?: number): SharedArrayBuffer;
     readonly length: number;
@@ -29,7 +30,7 @@ declare var ImageBitmap: {
     new(): ImageBitmap;
     readonly width: number;
     readonly height: number;
-}
+}*/
 
 interface WebGLQuery extends WebGLObject {
 }
