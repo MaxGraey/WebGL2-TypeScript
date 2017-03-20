@@ -277,6 +277,17 @@ interface WebGL2RenderingContext extends WebGLRenderingContext {
     readonly TEXTURE_IMMUTABLE_FORMAT: number;
     readonly TEXTURE_IMMUTABLE_LEVELS: number;
 
+    // Compressed textures
+    readonly COMPRESSED_R11_EAC: number;
+    readonly COMPRESSED_SIGNED_R11_EAC: number;
+    readonly COMPRESSED_RG11_EAC: number;
+    readonly COMPRESSED_SIGNED_RG11_EAC: number;
+    readonly COMPRESSED_RGB8_ETC2: number;
+    readonly COMPRESSED_SRGB8_ETC2: number;
+    readonly COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2: number;
+    readonly COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2: number;
+    readonly COMPRESSED_SRGB8_ALPHA8_ETC2_EAC: number;
+
     // Pixel types
     readonly UNSIGNED_INT_2_10_10_10_REV: number;
     readonly UNSIGNED_INT_10F_11F_11F_REV: number;
@@ -575,6 +586,17 @@ declare var WebGL2RenderingContext: {
     readonly RGB10_A2UI: number;
     readonly TEXTURE_IMMUTABLE_FORMAT: number;
     readonly TEXTURE_IMMUTABLE_LEVELS: number;
+
+    // Compressed textures
+    readonly COMPRESSED_R11_EAC: number;
+    readonly COMPRESSED_SIGNED_R11_EAC: number;
+    readonly COMPRESSED_RG11_EAC: number;
+    readonly COMPRESSED_SIGNED_RG11_EAC: number;
+    readonly COMPRESSED_RGB8_ETC2: number;
+    readonly COMPRESSED_SRGB8_ETC2: number;
+    readonly COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2: number;
+    readonly COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2: number;
+    readonly COMPRESSED_SRGB8_ALPHA8_ETC2_EAC: number;
 
     // Pixel types
     readonly UNSIGNED_INT_2_10_10_10_REV: number;
