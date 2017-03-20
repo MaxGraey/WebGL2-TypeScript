@@ -69,6 +69,8 @@ interface WebGL2RenderingContext extends WebGLRenderingContext {
     invalidateFramebuffer(target: number, attachments: number[]): void;
     invalidateSubFramebuffer(target: number, attachments: number[], x: number, y: number, width: number, height: number): void;
     readBuffer(src: number): void;
+    readPixels(x: number, y: number, width: number, height: number, format: number, type: number, offset: number): void;
+    readPixels(x: number, y: number, width: number, height: number, format: number, type: number, dstData: ArrayBufferView, dstOffset: number): void;
     getInternalformatParameter(target: number, internalformat: number, pname: number): Int32Array | number | null;
     renderbufferStorageMultisample(target: number, samples: number, internalFormat: number, width: number, height: number): void;
     texStorage2D(target: number, levels: number, internalformat: number, width: number, height: number): void;
