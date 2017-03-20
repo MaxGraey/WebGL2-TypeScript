@@ -68,6 +68,8 @@ interface WebGL2RenderingContext extends WebGLRenderingContext {
     framebufferTextureLayer(target: number, attachment: number, texture: WebGLTexture, level: number, layer: number): void;
     invalidateFramebuffer(target: number, attachments: number[]): void;
     invalidateSubFramebuffer(target: number, attachments: number[], x: number, y: number, width: number, height: number): void;
+    bufferData(target: number, srcData: ArrayBufferView, usage: number, srcOffset: number, length?: number): void;
+    bufferSubData(target: number, dstByteOffset: number, srcData: ArrayBufferView, srcOffset: number, length?: number): void;
     readBuffer(src: number): void;
     readPixels(x: number, y: number, width: number, height: number, format: number, type: number, offset: number): void;
     readPixels(x: number, y: number, width: number, height: number, format: number, type: number, dstData: ArrayBufferView, dstOffset: number): void;
