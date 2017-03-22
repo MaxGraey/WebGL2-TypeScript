@@ -1,16 +1,3 @@
-interface SharedArrayBuffer {
-    slice(begin?: number, end?: number): SharedArrayBuffer;
-    readonly length: number;
-    readonly byteLength: number;
-}
-
-declare var SharedArrayBuffer: {
-    prototype: SharedArrayBuffer;
-    new(length: number): SharedArrayBuffer;
-    readonly length: number;
-    readonly byteLength: number;
-}
-
 
 // ImageBitmap declarations
 

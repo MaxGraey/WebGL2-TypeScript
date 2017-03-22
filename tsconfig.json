@@ -5,7 +5,8 @@
         "noImplicitAny": true,
         "strictNullChecks": false,
         "types": [],
-        "forceConsistentCasingInFileNames": true
+        "forceConsistentCasingInFileNames": true,
+        "lib": ["ES2015", "ES2017.SharedMemory", "DOM"]
     },
     "files": [
         "Misc.d.ts",
