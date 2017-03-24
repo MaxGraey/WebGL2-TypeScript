@@ -16,8 +16,8 @@ declare var ImageBitmap: {
 
 
 interface ImageBitmapRenderingContext {
-    readonly canvas: HTMLCanvasElement;
     transferFromImageBitmap(bitmap?: ImageBitmap): void;
+    readonly canvas: HTMLCanvasElement;
 }
 
 
@@ -35,4 +35,5 @@ interface Worker {
 declare var ImageBitmapRenderingContext: {
     prototype: ImageBitmapRenderingContext;
     new(): ImageBitmapRenderingContext;
+    readonly canvas: HTMLCanvasElement;
 }
