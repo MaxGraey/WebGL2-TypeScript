@@ -5,33 +5,6 @@
 declare type GLint64     = number;
 declare type GLuint64EXT = GLint64;
 
-/*
-interface SharedArrayBuffer {
-    slice(begin?: number, end?: number): SharedArrayBuffer;
-    readonly length: number;
-    readonly byteLength: number;
-}
-
-declare var SharedArrayBuffer: {
-    prototype: SharedArrayBuffer;
-    new(length: number): SharedArrayBuffer;
-    readonly length: number;
-    readonly byteLength: number;
-}
-
-interface ImageBitmap {
-    close(): void;
-    readonly width: number;
-    readonly height: number;
-}
-
-declare var ImageBitmap: {
-    prototype: ImageBitmap;
-    new(): ImageBitmap;
-    readonly width: number;
-    readonly height: number;
-}*/
-
 interface WebGLQuery extends WebGLObject {
 }
 
@@ -71,6 +44,48 @@ declare var WebGLVertexArrayObject: {
     prototype: WebGLVertexArrayObject;
     new(): WebGLVertexArrayObject;
 }
+
+interface WebGLTimerQueryEXT extends WebGLQuery {
+}
+
+declare var WebGLTimerQueryEXT: {
+    prototype: WebGLTimerQueryEXT;
+    new(): WebGLTimerQueryEXT;
+}
+
+
+interface EXT_disjoint_timer_query {
+    createQueryEXT(): WebGLTimerQueryEXT | null;
+    deleteQueryEXT(query: WebGLTimerQueryEXT | null): void;
+    isQueryEXT(query: WebGLTimerQueryEXT | null): boolean;
+    beginQueryEXT(target: number, query: WebGLTimerQueryEXT | null): void;
+    endQueryEXT(target: number): void;
+    queryCounterEXT(query: WebGLTimerQueryEXT | null, target: number): number;
+    getQueryEXT(target: number, pname: number): WebGLTimerQueryEXT | number | null;
+    getQueryObjectEXT(query: WebGLTimerQueryEXT | null, pname: number): number | boolean;
+
+    readonly QUERY_COUNTER_BITS_EXT: number;
+    readonly CURRENT_QUERY_EXT: number;
+    readonly QUERY_RESULT_EXT: number;
+    readonly QUERY_RESULT_AVAILABLE_EXT: number;
+    readonly TIME_ELAPSED_EXT: number;
+    readonly TIMESTAMP_EXT: number;
+    readonly GPU_DISJOINT_EXT: number;
+}
+
+declare var EXT_disjoint_timer_query: {
+    prototype: EXT_disjoint_timer_query;
+    new(): EXT_disjoint_timer_query;
+
+    readonly QUERY_COUNTER_BITS_EXT: number;
+    readonly CURRENT_QUERY_EXT: number;
+    readonly QUERY_RESULT_EXT: number;
+    readonly QUERY_RESULT_AVAILABLE_EXT: number;
+    readonly TIME_ELAPSED_EXT: number;
+    readonly TIMESTAMP_EXT: number;
+    readonly GPU_DISJOINT_EXT: number;
+}
+
 
 interface WebGL2RenderingContext extends WebGLRenderingContext {
     getIndexedParameter(target: number, index: number): WebGLBuffer | number | null;
@@ -809,49 +824,6 @@ declare var WebGL2RenderingContext: {
     readonly TIMEOUT_IGNORED: number;
     readonly MAX_CLIENT_WAIT_TIMEOUT_WEBGL: number;
 }
-
-
-interface WebGLTimerQueryEXT extends WebGLQuery {
-}
-
-declare var WebGLTimerQueryEXT: {
-    prototype: WebGLTimerQueryEXT;
-    new(): WebGLTimerQueryEXT;
-}
-
-
-interface EXT_disjoint_timer_query {
-    createQueryEXT(): WebGLTimerQueryEXT | null;
-    deleteQueryEXT(query: WebGLTimerQueryEXT | null): void;
-    isQueryEXT(query: WebGLTimerQueryEXT | null): boolean;
-    beginQueryEXT(target: number, query: WebGLTimerQueryEXT | null): void;
-    endQueryEXT(target: number): void;
-    queryCounterEXT(query: WebGLTimerQueryEXT | null, target: number): number;
-    getQueryEXT(target: number, pname: number): WebGLTimerQueryEXT | number | null;
-    getQueryObjectEXT(query: WebGLTimerQueryEXT | null, pname: number): number | boolean;
-
-    readonly QUERY_COUNTER_BITS_EXT: number;
-    readonly CURRENT_QUERY_EXT: number;
-    readonly QUERY_RESULT_EXT: number;
-    readonly QUERY_RESULT_AVAILABLE_EXT: number;
-    readonly TIME_ELAPSED_EXT: number;
-    readonly TIMESTAMP_EXT: number;
-    readonly GPU_DISJOINT_EXT: number;
-}
-
-declare var EXT_disjoint_timer_query: {
-    prototype: EXT_disjoint_timer_query;
-    new(): EXT_disjoint_timer_query;
-
-    readonly QUERY_COUNTER_BITS_EXT: number;
-    readonly CURRENT_QUERY_EXT: number;
-    readonly QUERY_RESULT_EXT: number;
-    readonly QUERY_RESULT_AVAILABLE_EXT: number;
-    readonly TIME_ELAPSED_EXT: number;
-    readonly TIMESTAMP_EXT: number;
-    readonly GPU_DISJOINT_EXT: number;
-}
-
 
 interface HTMLCanvasElement {
     getContext(contextId: "webgl2" | "experimental-webgl2", contextAttributes?: WebGLContextAttributes): WebGL2RenderingContext | null;
