@@ -193,7 +193,7 @@ interface WebGL2RenderingContext extends WebGLRenderingContext {
     bindTransformFeedback(target: number, transformFeedback: WebGLTransformFeedback | null): void;
     beginTransformFeedback(primitiveMode: number): void;
     endTransformFeedback(): void;
-    transformFeedbackVaryins(program: WebGLProgram | null, varyings: string[], bufferMode: number): void;
+    transformFeedbackVaryings(program: WebGLProgram | null, varyings: string[], bufferMode: number): void;
     getTransformFeedbackVarying(program: WebGLProgram | null, index: number): WebGLActiveInfo;
     pauseTransformFeedback(): void;
     resumeTransformFeedback(): void;
