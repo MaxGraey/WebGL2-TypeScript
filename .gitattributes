@@ -1,6 +1,2 @@
 * text=auto
-*.js text
-*.css text
-
-# help to Github linguist determine this code as JavaScript mostly
-*.d.ts linguist-language=TypeScript
+*.* linguist-language=TypeScript
