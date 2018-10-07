@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 Max Shaydo aka MaxGraey (https://github.com/MaxGraey)
+// Copyright (c) 2018 Max Shaydo aka MaxGraey (https://github.com/MaxGraey)
 //
 
 declare type GLint64     = number;
