@@ -1,15 +1,25 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "noImplicitAny": true,
-        "strictNullChecks": false,
-        "types": [],
-        "forceConsistentCasingInFileNames": true,
-        "lib": ["ES2015", "ES2017.SharedMemory", "DOM"]
-    },
-    "files": [
-        "Misc.d.ts",
-        "WebGL2.d.ts"
-    ]
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "sourceMap": true,
+    "declaration": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["ES2017", "DOM"]
+  },
+  "files": [
+    "Misc.d.ts",
+    "WebGL2.d.ts"
+  ],
+  "exclude": [
+    ".git",
+    "node_modules"
+  ]
 }
